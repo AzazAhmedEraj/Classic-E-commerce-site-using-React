@@ -67,17 +67,15 @@ export default function CategoriesPage() {
                   transition={{ delay: index * 0.1, type: 'spring', stiffness: 100 }}
                   className="group relative"
                 >
-                  <Link href={`/products?category=${category.slug}`}>
+                  <Link href={`/products?category=${category.slug}`} className="block">
                     <div className="relative aspect-square overflow-hidden rounded-3xl gradient-border-animated glass-subtle group-hover:shadow-2xl group-hover:shadow-indigo-500/10 transition-all duration-500">
-                      <div className="absolute inset-0 overflow-hidden">
-                        <img
-                          src={category.image}
-                          alt={category.name}
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                        />
-                      </div>
+                      <img
+                        src={category.image}
+                        alt={category.name}
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                      <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                      <div className="relative inset-0 p-6 flex flex-col justify-end h-full">
                         <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-indigo-600/80 to-mint-500/80 backdrop-blur-sm text-white text-xs w-fit mb-3">
                           <Heart className="h-3 w-3 fill-white" />
                           {category.count}টি পণ্য

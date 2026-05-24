@@ -46,16 +46,13 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
         </div>
 
         {/* Image container */}
-        <Link href={`/products/${product.slug}`}>
+        <Link href={`/products/${product.slug}`} className="block h-full w-full">
           <div className="absolute inset-0 overflow-hidden">
             <motion.img
               src={product.images[0]}
               alt={product.name}
               className="h-full w-full object-cover"
-              animate={{
-                scale: isHovered ? 1.15 : 1,
-                rotate: isHovered ? 2 : 0,
-              }}
+              style={{ transform: isHovered ? 'scale(1.15) rotate(2deg)' : 'scale(1)' }}
               transition={{ duration: 0.7, ease: 'easeOut' }}
             />
           </div>

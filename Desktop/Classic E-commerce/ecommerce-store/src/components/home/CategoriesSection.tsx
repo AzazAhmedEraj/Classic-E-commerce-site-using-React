@@ -130,31 +130,25 @@ export default function CategoriesSection() {
               onMouseEnter={() => setHoveredCategory(index)}
               onMouseLeave={() => setHoveredCategory(null)}
             >
-              <Link href={`/categories/${category.slug}`}>
+              <Link href={`/categories/${category.slug}`} className="block">
                 <div className="relative aspect-square overflow-hidden rounded-3xl gradient-border-animated glass-advanced group-hover:shadow-2xl group-hover:shadow-indigo-500/20 transition-all duration-500">
-                  {/* Image with parallax */}
-                  <div className="absolute inset-0 overflow-hidden">
-                    <motion.img
-                      src={category.image}
-                      alt={category.name}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      style={{
-                        transform: hoveredCategory === index ? 'scale(1.15) rotate(2deg)' : 'scale(1)',
-                      }}
-                    />
-                  </div>
+                  <img
+                    src={category.image}
+                    alt={category.name}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    style={{
+                      transform: hoveredCategory === index ? 'scale(1.15) rotate(2deg)' : 'scale(1)',
+                    }}
+                  />
 
                   {/* Gradient overlay */}
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"
-                    animate={{
-                      opacity: hoveredCategory === index ? 1 : 0.7,
-                    }}
-                    transition={{ duration: 0.3 }}
+                  <div
+                    className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-300"
+                    style={{ opacity: hoveredCategory === index ? 1 : 0.7 }}
                   />
 
                   {/* Content */}
-                  <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                  <div className="relative inset-0 p-6 flex flex-col justify-end h-full">
                     {/* Category count badge */}
                     <motion.div
                       initial={{ opacity: 0, x: -20 }}
