@@ -86,7 +86,7 @@ export default function CartDrawer() {
                             </Button>
                           </div>
                           <p className="text-sm text-muted-foreground">
-                            ${item.price}
+                            ৳{item.price}
                           </p>
                           <div className="mt-auto flex items-center gap-2">
                             <Button
@@ -127,16 +127,16 @@ export default function CartDrawer() {
                   <div className="space-y-2">
                     <div className="flex justify-between text-sm">
                       <span className="text-muted-foreground">Subtotal</span>
-                      <span>${totalPrice().toFixed(2)}</span>
+                      <span className="text-indigo-600 font-medium">৳{totalPrice().toFixed(2)}</span>
                     </div>
                     <div className="flex justify-between text-sm">
                       <span className="text-muted-foreground">Shipping</span>
-                      <span className="text-green-600">Free</span>
+                      <span className="text-mint-600 font-medium">ফ্রি</span>
                     </div>
                     <Separator />
                     <div className="flex justify-between font-semibold text-lg">
                       <span>Total</span>
-                      <span>${totalPrice().toFixed(2)}</span>
+                      <span className="text-lg font-bold text-indigo-600">৳{totalPrice().toFixed(2)}</span>
                     </div>
                   </div>
                   <Button className="w-full" size="lg">

@@ -21,7 +21,7 @@ const values = [
     titleEn: 'Quality',
     description: 'আমরা শুধুমাত্র সেরা মানের পণ্য সরবরাহ করি। প্রতিটি পণ্য কঠোর পরীক্ষার মধ্য দিয়ে যায়।',
     descriptionEn: 'We provide only the best quality products. Each item goes through rigorous testing.',
-    color: 'from-red-800 to-red-600',
+    color: 'from-indigo-800 to-indigo-600',
   },
   {
     icon: Heart,
@@ -29,7 +29,7 @@ const values = [
     titleEn: 'Trust',
     description: 'আমাদের গ্রাহকদের বিশ্বাসই আমাদের সবচেয়ে বড় সম্পদ।',
     descriptionEn: 'Our customers trust is our greatest asset.',
-    color: 'from-amber-700 to-amber-500',
+    color: 'from-mint-700 to-mint-500',
   },
   {
     icon: CheckCircle,
@@ -37,7 +37,7 @@ const values = [
     titleEn: 'Authenticity',
     description: '১০০% খাঁটি বাংলার ঐতিহ্যবাহী পণ্যের নিশ্চয়তা।',
     descriptionEn: '100% authentic traditional Bengali products guaranteed.',
-    color: 'from-green-800 to-green-600',
+    color: 'from-teal-800 to-teal-600',
   },
 ];
 
@@ -74,7 +74,7 @@ export default function AboutPage() {
                 transition={{ type: 'spring', stiffness: 200, delay: 0.3 }}
                 className="inline-flex items-center gap-2 rounded-full glass-subtle px-6 py-3 text-sm mb-6"
               >
-                <Sparkles className="h-4 w-4 text-amber-400" />
+                <Sparkles className="h-4 w-4 text-indigo-400" />
                 <span>দেশীয় পণ্য, আন্তর্জাতিক মান</span>
               </motion.div>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
@@ -148,12 +148,12 @@ export default function AboutPage() {
                   className="text-center glass-subtle p-8 rounded-3xl border group hover:shadow-xl transition-all"
                 >
                   <motion.div
-                    className="inline-flex p-4 rounded-2xl bg-gradient-bengal text-white mb-4 mx-auto"
+                    className="inline-flex p-4 rounded-2xl bg-gradient-to-br from-indigo-600 to-mint-500 text-white mb-4 mx-auto"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                   >
                     <stat.icon className="h-8 w-8" />
                   </motion.div>
-                  <p className="text-4xl md:text-5xl font-bold text-gradient-bengal mb-2">
+                  <p className="text-4xl md:text-5xl font-bold text-gradient mb-2">
                     {stat.value}
                   </p>
                   <p className="font-semibold text-foreground">{stat.label}</p>
@@ -272,7 +272,7 @@ export default function AboutPage() {
                 <div className="flex flex-wrap justify-center gap-4">
                   <Button
                     size="lg"
-                    className="rounded-full px-8 py-6 text-lg bg-white text-red-900 hover:bg-amber-100"
+                    className="rounded-full px-8 py-6 text-lg bg-white text-indigo-900 hover:bg-indigo-100"
                     onClick={() => window.location.href = '/products'}
                   >
                     এখনই কিনুন

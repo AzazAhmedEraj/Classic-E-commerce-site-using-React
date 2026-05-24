@@ -39,17 +39,17 @@ export default function ProductPage({ params }: ProductPageProps) {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: 'spring', stiffness: 200 }}
-                className="h-32 w-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-red-800 to-amber-600 flex items-center justify-center shadow-xl"
+                className="h-32 w-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-indigo-600 to-mint-500 flex items-center justify-center shadow-xl"
               >
                 <Shield className="h-16 w-16 text-white" />
               </motion.div>
-              <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gradient-bengal">
+              <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gradient">
                 পণ্য পাওয়া যায়নি
               </h1>
               <p className="text-muted-foreground mb-8">
                 দুঃখিত, এই পণ্যটি এখনো উপলব্ধ নয়। আমাদের অন্যান্য পণ্য দেখুন!
               </p>
-              <Button size="lg" className="rounded-full bg-gradient-bengal text-white hover:opacity-90" onClick={() => window.location.href = '/products'}>
+              <Button size="lg" className="rounded-full bg-gradient-to-r from-indigo-600 via-mint-500 to-teal-600 text-white hover:opacity-90" onClick={() => window.location.href = '/products'}>
                 সব পণ্য দেখুন
               </Button>
             </motion.div>
@@ -92,7 +92,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                   className="h-full w-full object-cover"
                 />
                 {discount > 0 && (
-                  <Badge className="absolute top-4 left-4 rounded-full bg-gradient-to-r from-red-800 to-red-600 text-white">
+                  <Badge className="absolute top-4 left-4 rounded-full bg-gradient-to-r from-indigo-600 to-indigo-400 text-white">
                     -{discount}% ছাড়
                   </Badge>
                 )}
@@ -105,7 +105,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                       onClick={() => setSelectedImage(index)}
                       className={`relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-xl border-2 transition-all ${
                         selectedImage === index
-                          ? 'border-red-800 shadow-lg'
+                          ? 'border-indigo-600 shadow-lg'
                           : 'border-transparent hover:border-muted-foreground/50'
                       }`}
                     >
@@ -124,17 +124,17 @@ export default function ProductPage({ params }: ProductPageProps) {
             <div className="space-y-6">
               <div>
                 <div className="flex items-center gap-2 mb-2">
-                  <Badge variant="outline" className="rounded-full border-red-800/50 text-red-800">
+                  <Badge variant="outline" className="rounded-full border-indigo-600/50 text-indigo-600">
                     {product.category}
                   </Badge>
                   {product.inStock && (
-                    <Badge className="rounded-full bg-green-600 text-white">
+                    <Badge className="rounded-full bg-mint-600 text-white">
                       <CheckCircle className="h-3 w-3 mr-1" />
                       স্টকে আছে
                     </Badge>
                   )}
                 </div>
-                <h1 className="text-3xl md:text-4xl font-bold mb-2 text-gradient-bengal">
+                <h1 className="text-3xl md:text-4xl font-bold mb-2 text-gradient">
                   {product.name}
                 </h1>
                 <p className="text-sm text-muted-foreground">{product.nameEn}</p>
@@ -145,7 +145,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                         key={i}
                         className={`h-5 w-5 ${
                           i < Math.floor(product.rating)
-                            ? 'text-amber-500 fill-amber-500'
+                            ? 'text-yellow-500 fill-yellow-500'
                             : 'text-muted-foreground'
                         }`}
                       />
@@ -158,7 +158,7 @@ export default function ProductPage({ params }: ProductPageProps) {
               </div>
 
               <div className="flex items-baseline gap-3">
-                <span className="text-4xl font-bold text-gradient-bengal">
+                <span className="text-4xl font-bold text-transparent bg-gradient-to-r from-indigo-600 via-mint-500 to-teal-600 bg-clip-text">
                   ৳{product.price.toLocaleString()}
                 </span>
                 {product.comparePrice && (
@@ -167,7 +167,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                   </span>
                 )}
                 {discount > 0 && (
-                  <Badge className="rounded-full bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400">
+                  <Badge className="rounded-full bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400">
                     {discount}% ছাড়
                   </Badge>
                 )}
@@ -186,7 +186,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                   <Badge
                     key={tag}
                     variant="outline"
-                    className="rounded-full border-amber-700/50 text-amber-700 dark:border-amber-500/50 dark:text-amber-400"
+                    className="rounded-full border-indigo-600/50 text-indigo-600 dark:border-indigo-500/50 dark:text-indigo-400"
                   >
                     {tag}
                   </Badge>
@@ -196,7 +196,7 @@ export default function ProductPage({ params }: ProductPageProps) {
               {/* Features */}
               <div className="grid grid-cols-3 gap-4">
                 <div className="flex items-center gap-2 text-sm p-3 rounded-xl glass-subtle border">
-                  <div className="p-2 rounded-lg bg-gradient-to-br from-green-600 to-green-400 text-white">
+                  <div className="p-2 rounded-lg bg-gradient-to-br from-mint-600 to-mint-400 text-white">
                     <Truck className="h-4 w-4" />
                   </div>
                   <div>
@@ -205,7 +205,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                   </div>
                 </div>
                 <div className="flex items-center gap-2 text-sm p-3 rounded-xl glass-subtle border">
-                  <div className="p-2 rounded-lg bg-gradient-to-br from-blue-600 to-blue-400 text-white">
+                  <div className="p-2 rounded-lg bg-gradient-to-br from-indigo-600 to-indigo-400 text-white">
                     <RefreshCcw className="h-4 w-4" />
                   </div>
                   <div>
@@ -214,7 +214,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                   </div>
                 </div>
                 <div className="flex items-center gap-2 text-sm p-3 rounded-xl glass-subtle border">
-                  <div className="p-2 rounded-lg bg-gradient-to-br from-purple-600 to-purple-400 text-white">
+                  <div className="p-2 rounded-lg bg-gradient-to-br from-teal-600 to-teal-400 text-white">
                     <Shield className="h-4 w-4" />
                   </div>
                   <div>
@@ -246,7 +246,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                   </div>
                   <Button
                     size="lg"
-                    className="flex-1 rounded-full bg-gradient-bengal text-white hover:opacity-90 transition-opacity"
+                    className="flex-1 rounded-full bg-gradient-to-r from-indigo-600 via-mint-500 to-teal-600 text-white hover:opacity-90 transition-opacity"
                     onClick={() =>
                       addItem({
                         id: `${product.id}-${Date.now()}`,
@@ -279,7 +279,7 @@ export default function ProductPage({ params }: ProductPageProps) {
             </TabsList>
             <TabsContent value="description" className="mt-6">
               <div className="glass-subtle p-6 rounded-2xl border space-y-4">
-                <h3 className="font-bold text-lg text-gradient-bengal">পণ্যের বিস্তারিত</h3>
+                <h3 className="font-bold text-lg text-gradient">পণ্যের বিস্তারিত</h3>
                 <p className="text-muted-foreground leading-relaxed">{product.description}</p>
                 <div className="flex flex-wrap gap-2 pt-4">
                   {product.tags?.map((tag) => (
@@ -293,8 +293,8 @@ export default function ProductPage({ params }: ProductPageProps) {
             <TabsContent value="reviews" className="mt-6">
               <div className="glass-subtle p-6 rounded-2xl border space-y-4">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-bold text-lg text-gradient-bengal">গ্রাহক পর্যালোচনা</h3>
-                  <Badge className="rounded-full bg-amber-600 text-white">
+                  <h3 className="font-bold text-lg text-gradient">গ্রাহক পর্যালোচনা</h3>
+                  <Badge className="rounded-full bg-indigo-600 text-white">
                     {product.rating}★ ({product.reviews})
                   </Badge>
                 </div>
@@ -305,7 +305,7 @@ export default function ProductPage({ params }: ProductPageProps) {
                     { name: 'নুসরাত জাহান', nameEn: 'Nusrat J.', rating: 4, comment: 'ভালো পণ্য, তবে প্যাকেজিং আরও ভালো হতে পারত।', date: '২ সপ্তাহ আগে' },
                   ].map((review, i) => (
                     <div key={i} className="flex items-start gap-4 p-4 rounded-xl border glass-subtle">
-                      <div className="h-12 w-12 rounded-full bg-gradient-to-br from-red-800 to-amber-600 flex items-center justify-center text-white font-bold">
+                      <div className="h-12 w-12 rounded-full bg-gradient-to-br from-indigo-600 to-mint-500 flex items-center justify-center text-white font-bold">
                         {review.name.charAt(0)}
                       </div>
                       <div className="flex-1">
@@ -337,27 +337,27 @@ export default function ProductPage({ params }: ProductPageProps) {
             </TabsContent>
             <TabsContent value="shipping" className="mt-6">
               <div className="glass-subtle p-6 rounded-2xl border space-y-4">
-                <h3 className="font-bold text-lg text-gradient-bengal">শিপিং তথ্য</h3>
+                <h3 className="font-bold text-lg text-gradient">শিপিং তথ্য</h3>
                 <div className="space-y-3">
-                  <div className="flex items-center gap-3 p-3 rounded-xl bg-green-50 dark:bg-green-900/20">
-                    <Truck className="h-5 w-5 text-green-600" />
+                  <div className="flex items-center gap-3 p-3 rounded-xl bg-mint-50 dark:bg-mint-900/20">
+                    <Truck className="h-5 w-5 text-mint-600" />
                     <div>
-                      <p className="font-semibold text-green-700 dark:text-green-300">ফ্রি স্ট্যান্ডার্ড শিপিং</p>
-                      <p className="text-sm text-green-600 dark:text-green-400">৫-৭ কর্মদিবস - সারা দেশে</p>
+                      <p className="font-semibold text-mint-700 dark:text-mint-300">ফ্রি স্ট্যান্ডার্ড শিপিং</p>
+                      <p className="text-sm text-mint-600 dark:text-mint-400">৫-৭ কর্মদিবস - সারা দেশে</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3 p-3 rounded-xl bg-blue-50 dark:bg-blue-900/20">
-                    <Truck className="h-5 w-5 text-blue-600" />
+                  <div className="flex items-center gap-3 p-3 rounded-xl bg-indigo-50 dark:bg-indigo-900/20">
+                    <Truck className="h-5 w-5 text-indigo-600" />
                     <div>
-                      <p className="font-semibold text-blue-700 dark:text-blue-300">এক্সপ্রেস ডেলিভারি</p>
-                      <p className="text-sm text-blue-600 dark:text-blue-400">২-৩ কর্মদিবস (৳৯৯)</p>
+                      <p className="font-semibold text-indigo-700 dark:text-indigo-300">এক্সপ্রেস ডেলিভারি</p>
+                      <p className="text-sm text-indigo-600 dark:text-indigo-400">২-৩ কর্মদিবস (৳৯৯)</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3 p-3 rounded-xl bg-purple-50 dark:bg-purple-900/20">
-                    <Truck className="h-5 w-5 text-purple-600" />
+                  <div className="flex items-center gap-3 p-3 rounded-xl bg-teal-50 dark:bg-teal-900/20">
+                    <Truck className="h-5 w-5 text-teal-600" />
                     <div>
-                      <p className="font-semibold text-purple-700 dark:text-purple-300">আগামীকাল ডেলিভারি</p>
-                      <p className="text-sm text-purple-600 dark:text-purple-400">দুপুর ২টার মধ্যে অর্ডার করুন (৳১৯৯)</p>
+                      <p className="font-semibold text-teal-700 dark:text-teal-300">আগামীকাল ডেলিভারি</p>
+                      <p className="text-sm text-teal-600 dark:text-teal-400">দুপুর ২টার মধ্যে অর্ডার করুন (৳১৯৯)</p>
                     </div>
                   </div>
                 </div>
@@ -370,7 +370,7 @@ export default function ProductPage({ params }: ProductPageProps) {
 
           {/* Related Products */}
           <section>
-            <h2 className="text-2xl font-bold mb-8 text-gradient-bengal">সম্পর্কিত পণ্য</h2>
+            <h2 className="text-2xl font-bold mb-8 text-gradient">সম্পর্কিত পণ্য</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {products.filter(p => p.category === product.category && p.id !== product.id).slice(0, 4).map((product, index) => (
                 <ProductCard key={product.id} product={product} index={index} />

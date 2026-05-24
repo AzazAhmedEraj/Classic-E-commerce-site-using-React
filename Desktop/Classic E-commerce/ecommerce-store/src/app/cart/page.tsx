@@ -27,17 +27,17 @@ export default function CartPage() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: 'spring', stiffness: 200 }}
-                className="h-32 w-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-red-800 to-amber-600 flex items-center justify-center shadow-xl"
+                className="h-32 w-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-indigo-600 to-mint-500 flex items-center justify-center shadow-xl"
               >
                 <ShoppingBag className="h-16 w-16 text-white" />
               </motion.div>
-              <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gradient-bengal">
+              <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gradient">
                 আপনার কার্ট খালি
               </h1>
               <p className="text-muted-foreground mb-8">
                 মনে হচ্ছে আপনি এখনও কিছু যোগ করেননি। আমাদের সংগ্রহ দেখুন!
               </p>
-              <Button size="lg" className="rounded-full bg-gradient-bengal text-white hover:opacity-90" onClick={() => window.location.href = '/products'}>
+              <Button size="lg" className="rounded-full bg-gradient-to-r from-indigo-600 via-mint-500 to-teal-600 text-white hover:opacity-90" onClick={() => window.location.href = '/products'}>
                 <ShoppingBag className="h-5 w-5 mr-2" />
                 এখনই কিনুন
               </Button>
@@ -66,7 +66,7 @@ export default function CartPage() {
               কেনাকাটা চালিয়ে যান
             </Link>
 
-            <h1 className="text-3xl md:text-4xl font-bold mb-8 text-gradient-bengal">
+            <h1 className="text-3xl md:text-4xl font-bold mb-8 text-gradient">
               আপনার কার্ট ({totalItems()}টি পণ্য)
             </h1>
 
@@ -98,7 +98,7 @@ export default function CartPage() {
                         <Button
                           variant="ghost"
                           size="icon"
-                          className="h-8 w-8 rounded-full hover:bg-red-100 hover:text-red-600"
+                          className="h-8 w-8 rounded-full hover:bg-indigo-100 hover:text-indigo-600"
                           onClick={() => removeItem(item.id)}
                         >
                           <Trash2 className="h-4 w-4" />
@@ -122,7 +122,7 @@ export default function CartPage() {
                             <Plus className="h-3 w-3" />
                           </button>
                         </div>
-                        <p className="font-bold text-lg text-gradient-bengal">
+                        <p className="font-bold text-lg text-transparent bg-gradient-to-r from-indigo-600 via-mint-500 to-teal-600 bg-clip-text">
                           ৳{(item.price * item.quantity).toLocaleString()}
                         </p>
                       </div>
@@ -139,7 +139,7 @@ export default function CartPage() {
                   className="border rounded-2xl p-6 space-y-4 sticky top-24 glass-subtle"
                 >
                   <h2 className="text-lg font-semibold flex items-center gap-2">
-                    <ShoppingBag className="h-5 w-5 text-red-800" />
+                    <ShoppingBag className="h-5 w-5 text-indigo-600" />
                     অর্ডার সারসংক্ষেপ
                   </h2>
 
@@ -150,7 +150,7 @@ export default function CartPage() {
                     </div>
                     <div className="flex justify-between text-sm">
                       <span className="text-muted-foreground">ডেলিভারি</span>
-                      <span className="text-green-600 font-medium">ফ্রি</span>
+                      <span className="text-mint-600 font-medium">ফ্রি</span>
                     </div>
                     <div className="flex justify-between text-sm">
                       <span className="text-muted-foreground">ট্যাক্স (২%)</span>
@@ -159,7 +159,7 @@ export default function CartPage() {
                     <Separator />
                     <div className="flex justify-between font-bold text-xl">
                       <span>মোট</span>
-                      <span className="text-gradient-bengal">৳{(totalPrice() * 1.02).toLocaleString()}</span>
+                      <span className="text-transparent bg-gradient-to-r from-indigo-600 via-mint-500 to-teal-600 bg-clip-text">৳{(totalPrice() * 1.02).toLocaleString()}</span>
                     </div>
                   </div>
 
@@ -175,7 +175,7 @@ export default function CartPage() {
                     </div>
                   </div>
 
-                  <Button className="w-full rounded-full bg-gradient-bengal text-white hover:opacity-90 transition-opacity" size="lg" onClick={() => window.location.href = '/checkout'}>
+                  <Button className="w-full rounded-full bg-gradient-to-r from-indigo-600 via-mint-500 to-teal-600 text-white hover:opacity-90 transition-opacity" size="lg" onClick={() => window.location.href = '/checkout'}>
                       চেকআউট করুন
                   </Button>
 

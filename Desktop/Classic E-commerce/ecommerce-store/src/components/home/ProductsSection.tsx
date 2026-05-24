@@ -30,7 +30,7 @@ export default function ProductsSection({
       {/* Decorative elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div
-          className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-gradient-to-br from-purple-500/10 via-pink-500/10 to-transparent rounded-full blur-3xl"
+          className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-gradient-to-br from-indigo-500/10 via-mint-500/10 to-transparent rounded-full blur-3xl"
           animate={{
             x: [0, 40, 0],
             y: [0, -30, 0],
@@ -39,7 +39,7 @@ export default function ProductsSection({
           transition={{ duration: 15, repeat: Infinity }}
         />
         <motion.div
-          className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-to-bl from-cyan-500/10 via-green-500/10 to-transparent rounded-full blur-3xl"
+          className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-gradient-to-bl from-teal-500/10 via-indigo-500/10 to-transparent rounded-full blur-3xl"
           animate={{
             x: [0, -40, 0],
             y: [0, 30, 0],
@@ -52,7 +52,7 @@ export default function ProductsSection({
         {Array.from({ length: 10 }).map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 rounded-full bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 opacity-20"
+            className="absolute w-2 h-2 rounded-full bg-gradient-to-r from-indigo-500 via-mint-500 to-teal-500 opacity-20"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -84,12 +84,12 @@ export default function ProductsSection({
             whileInView={{ scale: 1, rotate: 0 }}
             viewport={{ once: true }}
             transition={{ type: 'spring', stiffness: 200, delay: 0.1 }}
-            className="inline-flex items-center gap-2 rounded-full glass-advanced px-6 py-3 text-sm border border-yellow-500/20"
+            className="inline-flex items-center gap-2 rounded-full glass-advanced px-6 py-3 text-sm border border-indigo-500/20"
           >
             {title.includes('ট্রেন্ডিং') ? (
-              <TrendingUp className="h-4 w-4 text-yellow-500" />
+              <TrendingUp className="h-4 w-4 text-indigo-500" />
             ) : (
-              <Sparkles className="h-4 w-4 text-green-500" />
+              <Sparkles className="h-4 w-4 text-mint-500" />
             )}
             <span className="font-medium text-gradient">
               {title.includes('ট্রেন্ডিং') ? '🔥 হট পিকস' : '✨ নতুন এরিভাল'}
@@ -141,7 +141,7 @@ export default function ProductsSection({
         >
           <Button
             size="lg"
-            className="group relative overflow-hidden rounded-full px-8 py-6 text-lg font-semibold bg-gradient-to-r from-red-600 via-yellow-500 to-green-600 text-white shadow-lg hover:shadow-2xl hover:shadow-red-500/30 transition-all duration-300"
+            className="group relative overflow-hidden rounded-full px-8 py-6 text-lg font-semibold bg-gradient-to-r from-indigo-600 via-mint-500 to-teal-600 text-white shadow-lg hover:shadow-2xl hover:shadow-indigo-500/30 transition-all duration-300"
             onClick={() => window.location.href = viewAllHref}
           >
             <span className="relative z-10 flex items-center gap-2">
@@ -150,7 +150,7 @@ export default function ProductsSection({
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </span>
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-yellow-500 via-green-500 to-red-500"
+              className="absolute inset-0 bg-gradient-to-r from-mint-500 via-teal-500 to-indigo-500"
               initial={{ x: '-100%' }}
               whileHover={{ x: '100%' }}
               transition={{ duration: 0.5 }}
@@ -168,7 +168,7 @@ export default function ProductsSection({
         >
           {/* Animated gradient background */}
           <div className="absolute inset-0 gradient-animate opacity-80" style={{
-            backgroundImage: 'linear-gradient(135deg, rgba(220,38,38,0.9) 0%, rgba(251,191,36,0.8) 25%, rgba(22,163,74,0.9) 100%)'
+            backgroundImage: 'linear-gradient(135deg, rgba(99,102,241,0.9) 0%, rgba(16,185,129,0.8) 50%, rgba(20,184,166,0.9) 100%)'
           }} />
 
           {/* Pattern overlay */}

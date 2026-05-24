@@ -25,10 +25,10 @@ export default function CategoriesPage() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: 'spring', stiffness: 200 }}
-                className="inline-flex items-center gap-2 rounded-full glass-subtle px-6 py-3 text-sm border border-red-900/20"
+                className="inline-flex items-center gap-2 rounded-full glass-subtle px-6 py-3 text-sm border border-indigo-600/20"
               >
-                <Heart className="h-4 w-4 text-red-800" />
-                <span className="font-medium text-gradient-bengal">আমাদের ক্যাটাগরি সমূহ</span>
+                <Heart className="h-4 w-4 text-indigo-600" />
+                <span className="font-medium text-gradient">আমাদের ক্যাটাগরি সমূহ</span>
               </motion.div>
 
               <motion.h1
@@ -37,7 +37,7 @@ export default function CategoriesPage() {
                 transition={{ delay: 0.1 }}
                 className="text-4xl md:text-5xl lg:text-6xl font-bold"
               >
-                <span className="text-gradient-bengal">সব</span>
+                <span className="text-gradient">সব</span>
                 <span className="text-foreground ml-4">বিভাগ</span>
               </motion.h1>
 
@@ -68,7 +68,7 @@ export default function CategoriesPage() {
                   className="group relative"
                 >
                   <Link href={`/products?category=${category.slug}`}>
-                    <div className="relative aspect-square overflow-hidden rounded-3xl gradient-border-bengal glass-subtle group-hover:shadow-2xl group-hover:shadow-red-900/10 transition-all duration-500">
+                    <div className="relative aspect-square overflow-hidden rounded-3xl gradient-border-animated glass-subtle group-hover:shadow-2xl group-hover:shadow-indigo-500/10 transition-all duration-500">
                       <div className="absolute inset-0 overflow-hidden">
                         <img
                           src={category.image}
@@ -78,7 +78,7 @@ export default function CategoriesPage() {
                       </div>
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                       <div className="absolute inset-0 p-6 flex flex-col justify-end">
-                        <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-red-900/80 to-amber-700/80 backdrop-blur-sm text-white text-xs w-fit mb-3">
+                        <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-indigo-600/80 to-mint-500/80 backdrop-blur-sm text-white text-xs w-fit mb-3">
                           <Heart className="h-3 w-3 fill-white" />
                           {category.count}টি পণ্য
                         </div>
@@ -110,7 +110,7 @@ export default function CategoriesPage() {
               viewport={{ once: true }}
               className="relative overflow-hidden rounded-[2.5rem] glass-subtle p-8 md:p-12 text-center"
             >
-              <div className="absolute inset-0 gradient-bengal opacity-90" />
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 via-mint-500 to-teal-600 opacity-90" />
               <div className="absolute inset-0 nakshi-pattern opacity-10" />
               <div className="relative z-10 space-y-6">
                 <h2 className="text-3xl md:text-4xl font-bold text-white">
@@ -121,7 +121,7 @@ export default function CategoriesPage() {
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-red-900 font-semibold hover:bg-amber-100 transition-colors"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-indigo-900 font-semibold hover:bg-indigo-100 transition-colors"
                 >
                   যোগাযোগ করুন
                   <ArrowRight className="h-5 w-5" />

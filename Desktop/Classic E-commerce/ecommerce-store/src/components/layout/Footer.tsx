@@ -14,7 +14,7 @@ const features = [
     titleEn: 'Free Shipping',
     description: '৳৫০০+ অর্ডারে',
     descriptionEn: 'On orders over ৳৫০০',
-    color: 'from-blue-500 to-cyan-500',
+    color: 'from-indigo-600 to-indigo-400',
   },
   {
     icon: RefreshCcw,
@@ -22,7 +22,7 @@ const features = [
     titleEn: 'Easy Returns',
     description: '৭ দিনের রিটার্ন পলিসি',
     descriptionEn: '7-day return policy',
-    color: 'from-green-500 to-emerald-500',
+    color: 'from-mint-500 to-mint-400',
   },
   {
     icon: Headphones,
@@ -30,7 +30,7 @@ const features = [
     titleEn: '24/7 Support',
     description: 'সর্বদা প্রস্তুত',
     descriptionEn: 'Always ready',
-    color: 'from-purple-500 to-pink-500',
+    color: 'from-teal-500 to-teal-400',
   },
   {
     icon: ShoppingBag,
@@ -38,7 +38,7 @@ const features = [
     titleEn: 'Secure Payment',
     description: '১০০% নিরাপদ লেনদেন',
     descriptionEn: '100% secure transactions',
-    color: 'from-orange-500 to-red-500',
+    color: 'from-indigo-500 to-indigo-400',
   },
 ];
 
@@ -69,10 +69,10 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: Send, href: '#', label: 'Facebook', color: 'hover:bg-blue-600' },
-  { icon: Image, href: '#', label: 'Instagram', color: 'hover:bg-pink-600' },
-  { icon: Mail, href: 'https://www.linkedin.com/in/azaz-ahmed-eraj/', label: 'LinkedIn', color: 'hover:bg-blue-700', external: true },
-  { icon: Globe, href: '#', label: 'Website', color: 'hover:bg-green-600' },
+  { icon: Send, href: '#', label: 'Facebook', color: 'hover:bg-indigo-600' },
+  { icon: Image, href: '#', label: 'Instagram', color: 'hover:bg-teal-600' },
+  { icon: Mail, href: 'https://www.linkedin.com/in/azaz-ahmed-eraj/', label: 'LinkedIn', color: 'hover:bg-indigo-700', external: true },
+  { icon: Globe, href: '#', label: 'Website', color: 'hover:bg-mint-600' },
 ];
 
 export default function Footer() {
@@ -81,7 +81,7 @@ export default function Footer() {
       {/* Background decorations */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
-          className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-red-500/10 via-yellow-500/10 to-transparent rounded-full blur-3xl"
+          className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-indigo-500/10 via-mint-500/10 to-transparent rounded-full blur-3xl"
           animate={{
             x: [0, 40, 0],
             y: [0, -30, 0],
@@ -89,7 +89,7 @@ export default function Footer() {
           transition={{ duration: 15, repeat: Infinity }}
         />
         <motion.div
-          className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-green-500/10 via-cyan-500/10 to-transparent rounded-full blur-3xl"
+          className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-teal-500/10 via-indigo-500/10 to-transparent rounded-full blur-3xl"
           animate={{
             x: [0, -40, 0],
             y: [0, 30, 0],
@@ -149,11 +149,11 @@ export default function Footer() {
                 }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-red-600 via-yellow-500 to-green-600 flex items-center justify-center shadow-lg">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-600 via-mint-500 to-teal-600 flex items-center justify-center shadow-lg">
                   <ShoppingBag className="h-6 w-6 text-white" />
                 </div>
                 <motion.span
-                  className="text-3xl font-bold bg-gradient-to-r from-red-600 via-yellow-500 to-green-600 bg-clip-text text-transparent"
+                  className="text-3xl font-bold bg-gradient-to-r from-indigo-600 via-mint-500 to-teal-600 bg-clip-text text-transparent"
                   animate={{
                     backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
                   }}
@@ -211,7 +211,7 @@ export default function Footer() {
               <h4 className="font-semibold mb-4 flex items-center gap-2 text-lg">
                 {category}
                 <motion.div
-                  className="h-0.5 w-8 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500"
+                  className="h-0.5 w-8 bg-gradient-to-r from-indigo-500 via-mint-500 to-teal-500"
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: 1 }}
                   viewport={{ once: true }}
@@ -233,7 +233,7 @@ export default function Footer() {
                     >
                       {link.label}
                       <motion.span
-                        className="absolute -bottom-0.5 left-0 h-0.5 w-0 bg-gradient-to-r from-red-500 to-yellow-500"
+                        className="absolute -bottom-0.5 left-0 h-0.5 w-0 bg-gradient-to-r from-indigo-500 to-mint-500"
                         whileHover={{ width: '100%' }}
                         transition={{ duration: 0.2 }}
                       />
@@ -258,9 +258,9 @@ export default function Footer() {
             initial={{ scale: 0.8 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 rounded-full glass-advanced px-6 py-3 text-sm mb-4 border border-yellow-500/20"
+            className="inline-flex items-center gap-2 rounded-full glass-advanced px-6 py-3 text-sm mb-4 border border-indigo-500/20"
           >
-            <Sparkles className="h-4 w-4 text-yellow-500" />
+            <Sparkles className="h-4 w-4 text-indigo-500" />
             <span className="font-medium text-gradient">নিউজলেটার</span>
           </motion.div>
           <h3 className="text-xl font-semibold mb-2">সাবস্ক্রাইব করুন আমাদের নিউজলেটার</h3>
@@ -277,16 +277,16 @@ export default function Footer() {
             <Input
               type="email"
               placeholder="আপনার ইমেইল দিন"
-              className="flex-1 focus:ring-2 focus:ring-red-500/20 rounded-full"
+              className="flex-1 focus:ring-2 focus:ring-indigo-500/20 rounded-full"
             />
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button className="relative overflow-hidden rounded-full bg-gradient-to-r from-red-600 via-yellow-500 to-green-600 text-white shadow-lg hover:shadow-xl">
+              <Button className="relative overflow-hidden rounded-full bg-gradient-to-r from-indigo-600 via-mint-500 to-teal-600 text-white shadow-lg hover:shadow-xl">
                 <span className="relative z-10 flex items-center gap-2">
                   <Send className="h-4 w-4" />
                   সাবস্ক্রাইব
                 </span>
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-yellow-500 via-green-500 to-red-500"
+                  className="absolute inset-0 bg-gradient-to-r from-mint-500 via-teal-500 to-indigo-500"
                   initial={{ x: '-100%' }}
                   whileHover={{ x: '100%' }}
                   transition={{ duration: 0.4 }}
@@ -330,7 +330,7 @@ export default function Footer() {
                 >
                   {item}
                   <motion.div
-                    className="absolute -bottom-0.5 left-0 h-0.5 w-0 bg-gradient-to-r from-red-500 to-yellow-500"
+                    className="absolute -bottom-0.5 left-0 h-0.5 w-0 bg-gradient-to-r from-indigo-500 to-mint-500"
                     whileHover={{ width: '100%' }}
                     transition={{ duration: 0.2 }}
                   />
@@ -346,13 +346,13 @@ export default function Footer() {
             transition={{ delay: 0.3 }}
             className="flex items-center gap-2 text-sm text-muted-foreground"
           >
-            <Heart className="h-4 w-4 text-red-500 fill-red-500" />
+            <Heart className="h-4 w-4 text-indigo-500 fill-indigo-500" />
             <span>Developed by</span>
             <Link
               href="https://www.linkedin.com/in/azaz-ahmed-eraj/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-transparent bg-gradient-to-r from-red-600 via-yellow-500 to-green-600 bg-clip-text font-semibold hover:opacity-80 transition-opacity inline-flex items-center gap-1 group"
+              className="text-transparent bg-gradient-to-r from-indigo-600 via-mint-500 to-teal-600 bg-clip-text font-semibold hover:opacity-80 transition-opacity inline-flex items-center gap-1 group"
             >
               Eraj
               <motion.span

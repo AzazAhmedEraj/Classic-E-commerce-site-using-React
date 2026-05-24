@@ -58,7 +58,7 @@ export default function HeroSection() {
         {particles.map((particle) => (
           <motion.div
             key={particle.id}
-            className="absolute rounded-full bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 opacity-30"
+            className="absolute rounded-full bg-gradient-to-r from-indigo-500 via-mint-500 to-teal-500 opacity-30"
             style={{
               left: `${particle.x}%`,
               top: `${particle.y}%`,
@@ -83,12 +83,12 @@ export default function HeroSection() {
 
       {/* Decorative rings */}
       <motion.div
-        className="absolute top-1/4 right-1/4 w-96 h-96 border-2 border-red-500/10 rounded-full"
+        className="absolute top-1/4 right-1/4 w-96 h-96 border-2 border-indigo-500/10 rounded-full"
         animate={{ rotate: 360 }}
         transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
       />
       <motion.div
-        className="absolute bottom-1/4 left-1/4 w-64 h-64 border-2 border-yellow-500/10 rounded-full"
+        className="absolute bottom-1/4 left-1/4 w-64 h-64 border-2 border-mint-500/10 rounded-full"
         animate={{ rotate: -360 }}
         transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}
       />
@@ -268,7 +268,7 @@ export default function HeroSection() {
                 transition={{ duration: 3.5, repeat: Infinity, delay: 0.5 }}
               >
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-cyan-500 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-mint-500 to-teal-500 flex items-center justify-center">
                     <Star className="h-6 w-6 text-white" />
                   </div>
                   <div>
@@ -284,19 +284,19 @@ export default function HeroSection() {
                 transition={{ duration: 2.5, repeat: Infinity }}
               >
                 <div className="flex items-center gap-2">
-                  <Zap className="h-5 w-5 text-yellow-500" />
+                  <Zap className="h-5 w-5 text-indigo-500" />
                   <span className="font-medium text-sm">ফাস্ট ডেলিভারি</span>
                 </div>
               </motion.div>
 
               {/* Rotating decorative elements */}
               <motion.div
-                className="absolute top-0 left-1/2 w-4 h-4 rounded-full bg-gradient-to-r from-red-500 to-yellow-500"
+                className="absolute top-0 left-1/2 w-4 h-4 rounded-full bg-gradient-to-r from-indigo-500 to-mint-500"
                 animate={{ rotate: 360, scale: [1, 1.3, 1] }}
                 transition={{ duration: 3, repeat: Infinity }}
               />
               <motion.div
-                className="absolute bottom-0 right-1/2 w-3 h-3 rounded-full bg-gradient-to-r from-green-500 to-cyan-500"
+                className="absolute bottom-0 right-1/2 w-3 h-3 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500"
                 animate={{ rotate: -360, scale: [1, 1.5, 1] }}
                 transition={{ duration: 2.5, repeat: Infinity }}
               />
@@ -318,7 +318,7 @@ export default function HeroSection() {
             className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2"
           >
             <motion.div
-              className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-red-500 to-yellow-500"
+              className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-indigo-500 to-mint-500"
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
             />

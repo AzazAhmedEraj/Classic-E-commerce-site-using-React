@@ -48,7 +48,7 @@ export default function CategoriesSection() {
       {/* Background decorations */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div
-          className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-red-500/10 via-yellow-500/10 to-transparent rounded-full blur-3xl"
+          className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-indigo-500/10 via-mint-500/10 to-transparent rounded-full blur-3xl"
           animate={{
             x: [0, 40, 0],
             y: [0, -30, 0],
@@ -57,7 +57,7 @@ export default function CategoriesSection() {
           transition={{ duration: 12, repeat: Infinity }}
         />
         <motion.div
-          className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-green-500/10 via-cyan-500/10 to-transparent rounded-full blur-3xl"
+          className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-teal-500/10 via-indigo-500/10 to-transparent rounded-full blur-3xl"
           animate={{
             x: [0, -30, 0],
             y: [0, 30, 0],
@@ -84,11 +84,11 @@ export default function CategoriesSection() {
             whileInView={{ scale: 1, rotate: 0 }}
             viewport={{ once: true }}
             transition={{ type: 'spring', stiffness: 200, delay: 0.1 }}
-            className="inline-flex items-center gap-2 rounded-full glass-advanced px-6 py-3 text-sm border border-red-500/20"
+            className="inline-flex items-center gap-2 rounded-full glass-advanced px-6 py-3 text-sm border border-indigo-500/20"
           >
-            <Sparkles className="h-4 w-4 text-red-500" />
+            <Sparkles className="h-4 w-4 text-indigo-500" />
             <span className="font-medium text-gradient">আমাদের ক্যাটাগরি সমূহ</span>
-            <Sparkles className="h-4 w-4 text-red-500" />
+            <Sparkles className="h-4 w-4 text-indigo-500" />
           </motion.div>
 
           <motion.h2
@@ -131,7 +131,7 @@ export default function CategoriesSection() {
               onMouseLeave={() => setHoveredCategory(null)}
             >
               <Link href={`/categories/${category.slug}`}>
-                <div className="relative aspect-square overflow-hidden rounded-3xl gradient-border-animated glass-advanced group-hover:shadow-2xl group-hover:shadow-red-500/20 transition-all duration-500">
+                <div className="relative aspect-square overflow-hidden rounded-3xl gradient-border-animated glass-advanced group-hover:shadow-2xl group-hover:shadow-indigo-500/20 transition-all duration-500">
                   {/* Image with parallax */}
                   <div className="absolute inset-0 overflow-hidden">
                     <motion.img
@@ -161,7 +161,7 @@ export default function CategoriesSection() {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.1 + 0.2 }}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-red-500/80 to-yellow-500/80 backdrop-blur-sm text-white text-xs w-fit mb-3"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-indigo-500/80 to-mint-500/80 backdrop-blur-sm text-white text-xs w-fit mb-3"
                     >
                       <Heart className="h-3 w-3 fill-white" />
                       {category.count}টি পণ্য
@@ -228,7 +228,7 @@ export default function CategoriesSection() {
         >
           <Button
             size="lg"
-            className="group relative overflow-hidden rounded-full px-8 py-6 text-lg font-semibold bg-gradient-to-r from-red-600 via-yellow-500 to-green-600 text-white shadow-lg hover:shadow-2xl hover:shadow-red-500/30 transition-all duration-300"
+            className="group relative overflow-hidden rounded-full px-8 py-6 text-lg font-semibold bg-gradient-to-r from-indigo-600 via-mint-500 to-teal-600 text-white shadow-lg hover:shadow-2xl hover:shadow-indigo-500/30 transition-all duration-300"
             onClick={() => window.location.href = '/categories'}
           >
             <span className="relative z-10 flex items-center gap-2">
@@ -236,7 +236,7 @@ export default function CategoriesSection() {
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </span>
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-yellow-500 via-green-500 to-red-500"
+              className="absolute inset-0 bg-gradient-to-r from-mint-500 via-teal-500 to-indigo-500"
               initial={{ x: '-100%' }}
               whileHover={{ x: '100%' }}
               transition={{ duration: 0.5 }}

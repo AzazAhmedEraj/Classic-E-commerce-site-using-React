@@ -36,17 +36,17 @@ export default function CheckoutPage() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ type: 'spring', stiffness: 200 }}
-                className="h-32 w-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-red-800 to-amber-600 flex items-center justify-center shadow-xl"
+                className="h-32 w-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-indigo-600 to-mint-500 flex items-center justify-center shadow-xl"
               >
                 <ShoppingCart className="h-16 w-16 text-white" />
               </motion.div>
-              <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gradient-bengal">
+              <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gradient">
                 আপনার কার্ট খালি
               </h1>
               <p className="text-muted-foreground mb-8">
                 মনে হচ্ছে আপনি এখনও কিছু যোগ করেননি। আমাদের সংগ্রহ দেখুন!
               </p>
-              <Button size="lg" className="rounded-full bg-gradient-bengal text-white hover:opacity-90" onClick={() => window.location.href = '/products'}>
+              <Button size="lg" className="rounded-full bg-gradient-to-r from-indigo-600 via-mint-500 to-teal-600 text-white hover:opacity-90" onClick={() => window.location.href = '/products'}>
                   এখনই কিনুন
               </Button>
             </motion.div>
@@ -101,7 +101,7 @@ export default function CheckoutPage() {
                     <motion.div
                       className={cn(
                         'w-8 sm:w-16 h-0.5 mx-4',
-                        index < currentStep ? 'bg-gradient-bengal' : 'bg-muted-foreground/30'
+                        index < currentStep ? 'bg-gradient-to-r from-indigo-600 via-mint-500 to-teal-600' : 'bg-muted-foreground/30'
                       )}
                       initial={{ width: 0 }}
                       animate={{ width: index < currentStep ? '2rem' : '2rem', opacity: 1 }}
@@ -125,11 +125,11 @@ export default function CheckoutPage() {
                     className="border rounded-2xl p-6 space-y-6 glass-subtle"
                   >
                     <div className="flex items-center gap-2 mb-4">
-                      <div className="p-2 rounded-xl bg-gradient-to-br from-red-800 to-red-600 text-white">
+                      <div className="p-2 rounded-xl bg-gradient-to-br from-indigo-600 to-indigo-400 text-white">
                         <Truck className="h-5 w-5" />
                       </div>
                       <div>
-                        <h2 className="text-xl font-bold text-gradient-bengal">শিপিং তথ্য</h2>
+                        <h2 className="text-xl font-bold text-gradient">শিপিং তথ্য</h2>
                         <p className="text-sm text-muted-foreground">আপনার ডেলিভারির বিবরণ লিখুন</p>
                       </div>
                     </div>
@@ -174,7 +174,7 @@ export default function CheckoutPage() {
                         <label className="text-sm font-medium">
                           দেশ <span className="text-muted-foreground">(Country)</span>
                         </label>
-                        <select className="w-full rounded-xl border bg-background px-3 py-2 focus:border-red-900/50">
+                        <select className="w-full rounded-xl border bg-background px-3 py-2 focus:border-indigo-600/50">
                           <option>বাংলাদেশ</option>
                           <option>ভারত</option>
                           <option>পাকিস্তান</option>
@@ -184,7 +184,7 @@ export default function CheckoutPage() {
                       </div>
                     </div>
                     <Button
-                      className="w-full rounded-full bg-gradient-bengal text-white hover:opacity-90 transition-opacity"
+                      className="w-full rounded-full bg-gradient-to-r from-indigo-600 via-mint-500 to-teal-600 text-white hover:opacity-90 transition-opacity"
                       size="lg"
                       onClick={() => setCurrentStep(1)}
                     >
@@ -202,11 +202,11 @@ export default function CheckoutPage() {
                     className="border rounded-2xl p-6 space-y-6 glass-subtle"
                   >
                     <div className="flex items-center gap-2 mb-4">
-                      <div className="p-2 rounded-xl bg-gradient-to-br from-amber-700 to-amber-500 text-white">
+                      <div className="p-2 rounded-xl bg-gradient-to-br from-teal-600 to-teal-400 text-white">
                         <CreditCard className="h-5 w-5" />
                       </div>
                       <div>
-                        <h2 className="text-xl font-bold text-gradient-bengal">পেমেন্ট বিবরণ</h2>
+                        <h2 className="text-xl font-bold text-gradient">পেমেন্ট বিবরণ</h2>
                         <p className="text-sm text-muted-foreground">নিরাপদ পেমেন্ট পদ্ধতি</p>
                       </div>
                     </div>
@@ -230,9 +230,9 @@ export default function CheckoutPage() {
                         </div>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2 p-3 rounded-xl bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800">
-                      <Shield className="h-4 w-4 text-green-600" />
-                      <p className="text-xs text-green-700 dark:text-green-300">
+                    <div className="flex items-center gap-2 p-3 rounded-xl bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-200 dark:border-indigo-800">
+                      <Shield className="h-4 w-4 text-indigo-600" />
+                      <p className="text-xs text-indigo-700 dark:text-indigo-300">
                         আপনার পেমেন্ট তথ্য সম্পূর্ণ নিরাপদ এবং এনক্রিপ্টেড
                       </p>
                     </div>
@@ -245,7 +245,7 @@ export default function CheckoutPage() {
                         পেছনে যান
                       </Button>
                       <Button
-                        className="flex-1 rounded-full bg-gradient-bengal text-white hover:opacity-90"
+                        className="flex-1 rounded-full bg-gradient-to-r from-indigo-600 via-mint-500 to-teal-600 text-white hover:opacity-90"
                         size="lg"
                         onClick={() => setCurrentStep(2)}
                       >
@@ -266,12 +266,12 @@ export default function CheckoutPage() {
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ type: 'spring', stiffness: 200, delay: 0.2 }}
-                      className="h-20 w-20 mx-auto rounded-full bg-gradient-to-br from-green-600 to-green-400 flex items-center justify-center shadow-xl"
+                      className="h-20 w-20 mx-auto rounded-full bg-gradient-to-br from-mint-600 to-mint-400 flex items-center justify-center shadow-xl"
                     >
                       <Check className="h-10 w-10 text-white" />
                     </motion.div>
                     <div>
-                      <h2 className="text-2xl font-bold mb-2 text-gradient-bengal">
+                      <h2 className="text-2xl font-bold mb-2 text-gradient">
                         অর্ডার নিশ্চিত হয়েছে!
                       </h2>
                       <p className="text-muted-foreground">
@@ -279,14 +279,14 @@ export default function CheckoutPage() {
                         আমরা আপনার ইমেইলে একটি নিশ্চিতকরণ বার্তা পাঠিয়েছি।
                       </p>
                     </div>
-                    <div className="flex items-center justify-center gap-2 p-3 rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800">
-                      <Gift className="h-4 w-4 text-amber-600" />
-                      <p className="text-sm text-amber-700 dark:text-amber-300">
+                    <div className="flex items-center justify-center gap-2 p-3 rounded-xl bg-indigo-50 dark:bg-indigo-900/20 border border-indigo-200 dark:border-indigo-800">
+                      <Gift className="h-4 w-4 text-indigo-600" />
+                      <p className="text-sm text-indigo-700 dark:text-indigo-300">
                         আপনার প্রথম অর্ডারে ১০% ছাড়ের কোড: WELCOME10
                       </p>
                     </div>
                     <Button
-                      className="w-full rounded-full bg-gradient-bengal text-white hover:opacity-90"
+                      className="w-full rounded-full bg-gradient-to-r from-indigo-600 via-mint-500 to-teal-600 text-white hover:opacity-90"
                       size="lg"
                       onClick={() => window.location.href = '/products'}
                     >
@@ -304,7 +304,7 @@ export default function CheckoutPage() {
                 animate={{ opacity: 1, x: 0 }}
                 className="border rounded-2xl p-6 space-y-4 sticky top-24 h-fit glass-subtle"
               >
-                <h3 className="font-bold text-lg flex items-center gap-2 text-gradient-bengal">
+                <h3 className="font-bold text-lg flex items-center gap-2 text-gradient">
                   <ShoppingCart className="h-5 w-5" />
                   অর্ডার সারসংক্ষেপ
                 </h3>
@@ -321,7 +321,7 @@ export default function CheckoutPage() {
                       <div className="flex-1 min-w-0">
                         <p className="text-sm font-medium truncate">{item.name}</p>
                         <p className="text-xs text-muted-foreground">পরিমাণ: {item.quantity}</p>
-                        <p className="text-sm font-bold text-gradient-bengal">
+                        <p className="text-sm font-bold text-transparent bg-gradient-to-r from-indigo-600 via-mint-500 to-teal-600 bg-clip-text">
                           ৳{(item.price * item.quantity).toLocaleString()}
                         </p>
                       </div>
@@ -336,7 +336,7 @@ export default function CheckoutPage() {
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">ডেলিভারি</span>
-                    <span className="text-green-600 font-medium">ফ্রি</span>
+                    <span className="text-mint-600 font-medium">ফ্রি</span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">ট্যাক্স (২%)</span>
@@ -345,7 +345,7 @@ export default function CheckoutPage() {
                   <Separator />
                   <div className="flex justify-between font-bold text-lg">
                     <span>মোট</span>
-                    <span className="text-gradient-bengal">৳{(totalPrice() * 1.02).toLocaleString()}</span>
+                    <span className="text-transparent bg-gradient-to-r from-indigo-600 via-mint-500 to-teal-600 bg-clip-text">৳{(totalPrice() * 1.02).toLocaleString()}</span>
                   </div>
                 </div>
                 <div className="flex items-center gap-2 text-xs text-muted-foreground pt-4">

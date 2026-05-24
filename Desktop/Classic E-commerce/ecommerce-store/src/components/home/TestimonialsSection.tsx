@@ -39,14 +39,14 @@ export default function TestimonialsSection() {
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Floating quote marks */}
         <motion.div
-          className="absolute top-20 left-10 text-9xl font-serif text-red-500/5"
+          className="absolute top-20 left-10 text-9xl font-serif text-indigo-500/5"
           animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
           transition={{ duration: 8, repeat: Infinity }}
         >
           &ldquo;
         </motion.div>
         <motion.div
-          className="absolute bottom-20 right-10 text-9xl font-serif text-yellow-500/5 rotate-180"
+          className="absolute bottom-20 right-10 text-9xl font-serif text-mint-500/5 rotate-180"
           animate={{ y: [0, 20, 0], rotate: [180, 185, 180] }}
           transition={{ duration: 7, repeat: Infinity }}
         >
@@ -55,7 +55,7 @@ export default function TestimonialsSection() {
 
         {/* Gradient orbs */}
         <motion.div
-          className="absolute top-1/4 right-0 w-96 h-96 bg-gradient-to-br from-red-500/10 to-yellow-500/10 rounded-full blur-3xl"
+          className="absolute top-1/4 right-0 w-96 h-96 bg-gradient-to-br from-indigo-500/10 to-mint-500/10 rounded-full blur-3xl"
           animate={{
             x: [0, 40, 0],
             scale: [1, 1.1, 1],
@@ -63,7 +63,7 @@ export default function TestimonialsSection() {
           transition={{ duration: 12, repeat: Infinity }}
         />
         <motion.div
-          className="absolute bottom-1/4 left-0 w-80 h-80 bg-gradient-to-tr from-green-500/10 to-cyan-500/10 rounded-full blur-3xl"
+          className="absolute bottom-1/4 left-0 w-80 h-80 bg-gradient-to-tr from-teal-500/10 via-indigo-500/10 to-transparent rounded-full blur-3xl"
           animate={{
             x: [0, -40, 0],
             scale: [1, 1.15, 1],
@@ -135,9 +135,9 @@ export default function TestimonialsSection() {
               className="group relative"
             >
               {/* Card with gradient border effect */}
-              <div className="relative rounded-3xl border bg-card/80 backdrop-blur-xl p-8 space-y-6 shadow-xl transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-red-500/10 group-hover:border-red-500/30">
+              <div className="relative rounded-3xl border bg-card/80 backdrop-blur-xl p-8 space-y-6 shadow-xl transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-indigo-500/10 group-hover:border-indigo-500/30">
                 {/* Gradient border animation */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-red-500/20 via-yellow-500/20 to-green-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl" />
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-indigo-500/20 via-mint-500/20 to-teal-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl" />
 
                 {/* Quote icon */}
                 <motion.div
@@ -145,9 +145,9 @@ export default function TestimonialsSection() {
                   whileInView={{ scale: 1, rotate: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 + 0.3, type: 'spring', stiffness: 200 }}
-                  className="absolute top-6 right-6 p-3 rounded-full bg-gradient-to-br from-red-500/10 to-yellow-500/10"
+                  className="absolute top-6 right-6 p-3 rounded-full bg-gradient-to-br from-indigo-500/10 to-mint-500/10"
                 >
-                  <Quote className="h-5 w-5 text-red-500" />
+                  <Quote className="h-5 w-5 text-indigo-500" />
                 </motion.div>
 
                 {/* Rating stars with animation */}
@@ -207,11 +207,11 @@ export default function TestimonialsSection() {
                     <img
                       src={testimonial.image}
                       alt={testimonial.author}
-                      className="h-14 w-14 rounded-full object-cover ring-2 ring-red-500/20 ring-offset-2 ring-offset-background"
+                      className="h-14 w-14 rounded-full object-cover ring-2 ring-indigo-500/20 ring-offset-2 ring-offset-background"
                     />
                     {/* Verified badge */}
                     <motion.div
-                      className="absolute -bottom-1 -right-1 p-1.5 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 shadow-lg"
+                      className="absolute -bottom-1 -right-1 p-1.5 rounded-full bg-gradient-to-br from-mint-500 to-teal-600 shadow-lg"
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
                       viewport={{ once: true }}
@@ -231,7 +231,7 @@ export default function TestimonialsSection() {
                       className="flex items-center gap-2 mt-1"
                       whileHover={{ x: 2 }}
                     >
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-500/10 text-green-600 text-xs font-medium">
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-600 text-xs font-medium">
                         <CheckCircle className="h-3 w-3" />
                         ✓ যাচাইকৃত ক্রেতা
                       </span>
@@ -243,7 +243,7 @@ export default function TestimonialsSection() {
                 </motion.div>
 
                 {/* Hover glow effect */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-red-500/5 via-yellow-500/5 to-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-indigo-500/5 via-mint-500/5 to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
               </div>
             </motion.div>
           ))}
@@ -267,10 +267,10 @@ export default function TestimonialsSection() {
           </motion.p>
           <div className="flex justify-center items-center gap-4 md:gap-8 flex-wrap">
             {[
-              { label: '৪.৯/৫ রেটিং', labelEn: 'Rating', color: 'from-yellow-500 to-orange-500' },
-              { label: 'ফাস্ট ডেলিভারি', labelEn: 'Fast Shipping', color: 'from-blue-500 to-cyan-500' },
-              { label: 'নিরাপদ পেমেন্ট', labelEn: 'Secure Payment', color: 'from-green-500 to-emerald-500' },
-              { label: 'সহজ রিটার্ন', labelEn: 'Easy Returns', color: 'from-purple-500 to-pink-500' },
+              { label: '৪.৯/৫ রেটিং', labelEn: 'Rating', color: 'from-indigo-500 to-indigo-400' },
+              { label: 'ফাস্ট ডেলিভারি', labelEn: 'Fast Shipping', color: 'from-mint-500 to-mint-400' },
+              { label: 'নিরাপদ পেমেন্ট', labelEn: 'Secure Payment', color: 'from-teal-500 to-teal-400' },
+              { label: 'সহজ রিটার্ন', labelEn: 'Easy Returns', color: 'from-indigo-500 to-indigo-400' },
             ].map((badge, i) => (
               <motion.div
                 key={badge.label}
@@ -310,14 +310,14 @@ export default function TestimonialsSection() {
           >
             <Button
               size="lg"
-              className="group relative overflow-hidden rounded-full px-8 py-6 text-lg font-semibold bg-gradient-to-r from-red-600 via-yellow-500 to-green-600 text-white shadow-lg hover:shadow-2xl hover:shadow-red-500/30 transition-all duration-300"
+              className="group relative overflow-hidden rounded-full px-8 py-6 text-lg font-semibold bg-gradient-to-r from-indigo-600 via-mint-500 to-teal-600 text-white shadow-lg hover:shadow-2xl hover:shadow-indigo-500/30 transition-all duration-300"
             >
               <span className="relative z-10 flex items-center gap-2">
                 <Heart className="h-5 w-5" />
                 এখনই কিনুন
               </span>
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-yellow-500 via-green-500 to-red-500"
+                className="absolute inset-0 bg-gradient-to-r from-mint-500 via-teal-500 to-indigo-500"
                 initial={{ x: '-100%' }}
                 whileHover={{ x: '100%' }}
                 transition={{ duration: 0.5 }}

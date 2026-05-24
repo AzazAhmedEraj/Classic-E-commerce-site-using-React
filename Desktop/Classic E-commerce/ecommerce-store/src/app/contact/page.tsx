@@ -16,7 +16,7 @@ const contactInfo = [
     titleEn: 'Address',
     content: 'পুরান ঢাকা, বাংলাদেশ',
     contentEn: 'Old Dhaka, Bangladesh',
-    color: 'from-red-800 to-red-600',
+    color: 'from-indigo-800 to-indigo-600',
   },
   {
     icon: Phone,
@@ -24,14 +24,14 @@ const contactInfo = [
     titleEn: 'Phone',
     content: '+৮৮০ ১৭১১-০০০০০০',
     contentEn: '+880 1711-000000',
-    color: 'from-amber-700 to-amber-500',
+    color: 'from-mint-700 to-mint-500',
   },
   {
     icon: Mail,
     title: 'ইমেইল',
     titleEn: 'Email',
     content: 'hello@deshibazar.com',
-    color: 'from-green-800 to-green-600',
+    color: 'from-teal-800 to-teal-600',
   },
   {
     icon: Clock,
@@ -39,7 +39,7 @@ const contactInfo = [
     titleEn: 'Hours',
     content: 'শনি - বৃহস্পতি: ৯টা - ৬টা',
     contentEn: 'Sat - Thu: 9AM - 6PM',
-    color: 'from-blue-800 to-blue-600',
+    color: 'from-indigo-800 to-indigo-600',
   },
 ];
 
@@ -77,8 +77,8 @@ export default function ContactPage() {
                 transition={{ type: 'spring', stiffness: 200 }}
                 className="inline-flex items-center gap-2 rounded-full glass-subtle px-6 py-3 text-sm"
               >
-                <MessageCircle className="h-4 w-4 text-red-800" />
-                <span className="font-medium text-gradient-bengal">যোগাযোগ করুন</span>
+                <MessageCircle className="h-4 w-4 text-indigo-600" />
+                <span className="font-medium text-gradient">যোগাযোগ করুন</span>
               </motion.div>
 
               <motion.h1
@@ -225,7 +225,7 @@ export default function ContactPage() {
                     <Button
                       type="submit"
                       size="lg"
-                      className="w-full rounded-full bg-gradient-bengal text-white hover:opacity-90 transition-opacity"
+                      className="w-full rounded-full bg-gradient-to-r from-indigo-600 via-mint-500 to-teal-600 text-white hover:opacity-90 transition-opacity"
                     >
                       <Send className="h-5 w-5 mr-2" />
                       বার্তা পাঠান
@@ -256,7 +256,7 @@ export default function ContactPage() {
                     viewport={{ once: true }}
                   >
                     <div className="flex items-center gap-2 mb-4">
-                      <Heart className="h-6 w-6 text-red-500 fill-red-500" />
+                      <Heart className="h-6 w-6 text-indigo-500 fill-indigo-500" />
                       <span className="text-lg font-semibold">বাংলাদেশ</span>
                     </div>
                     <h3 className="text-3xl font-bold mb-4">
