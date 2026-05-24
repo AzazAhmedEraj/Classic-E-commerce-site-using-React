@@ -1,0 +1,471 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* Mint & Indigo Color Palette - Modern & Aesthetic */
+  --color-mint-light: #d1fae5;        /* Light mint */
+  --color-mint: #10b981;              /* Mint green */
+  --color-mint-dark: #059669;         /* Deep mint */
+  --color-indigo: #6366f1;            /* Indigo */
+  --color-indigo-dark: #4f46e5;       /* Deep indigo */
+  --color-indigo-light: #818cf8;      /* Light indigo */
+  --color-teal: #14b8a6;              /* Teal */
+  --color-cyan: #06b6d4;              /* Cyan */
+  --color-slate: #64748b;             /* Slate gray */
+  --color-rose: #f43f5e;              /* Rose accent */
+  --color-amber: #f59e0b;             /* Amber accent */
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-bengali: var(--font-bengali);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-heading);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  /* Clean modern background */
+  --background: oklch(0.98 0.01 240);
+  --foreground: oklch(0.2 0.02 240);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.02 240);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.02 240);
+  --primary: oklch(0.55 0.2 260);    /* Indigo */
+  --primary-foreground: oklch(0.98 0.01 240);
+  --secondary: oklch(0.95 0.02 240);
+  --secondary-foreground: oklch(0.3 0.02 240);
+  --muted: oklch(0.96 0.02 240);
+  --muted-foreground: oklch(0.5 0.02 240);
+  --accent: oklch(0.9 0.03 160);      /* Mint */
+  --accent-foreground: oklch(0.3 0.02 240);
+  --destructive: oklch(0.55 0.2 25);
+  --border: oklch(0.9 0.02 240);
+  --input: oklch(0.95 0.01 240);
+  --ring: oklch(0.55 0.2 260);
+  --chart-1: oklch(0.55 0.2 260);     /* Indigo */
+  --chart-2: oklch(0.55 0.15 160);    /* Mint */
+  --chart-3: oklch(0.65 0.15 200);    /* Cyan */
+  --chart-4: oklch(0.6 0.2 320);      /* Rose */
+  --chart-5: oklch(0.7 0.15 85);      /* Amber */
+  --radius: 0.75rem;
+  --sidebar: oklch(0.98 0.01 240);
+  --sidebar-foreground: oklch(0.2 0.02 240);
+  --sidebar-primary: oklch(0.55 0.2 260);
+  --sidebar-primary-foreground: oklch(0.98 0.01 240);
+  --sidebar-accent: oklch(0.95 0.02 240);
+  --sidebar-accent-foreground: oklch(0.3 0.02 240);
+  --sidebar-border: oklch(0.9 0.02 240);
+  --sidebar-ring: oklch(0.55 0.2 260);
+}
+
+.dark {
+  --background: oklch(0.15 0.02 240);
+  --foreground: oklch(0.95 0.01 240);
+  --card: oklch(0.2 0.02 240);
+  --card-foreground: oklch(0.95 0.01 240);
+  --popover: oklch(0.2 0.02 240);
+  --popover-foreground: oklch(0.95 0.01 240);
+  --primary: oklch(0.65 0.2 260);
+  --primary-foreground: oklch(0.98 0.01 240);
+  --secondary: oklch(0.25 0.02 240);
+  --secondary-foreground: oklch(0.95 0.01 240);
+  --muted: oklch(0.25 0.02 240);
+  --muted-foreground: oklch(0.65 0.02 240);
+  --accent: oklch(0.3 0.04 160);
+  --accent-foreground: oklch(0.95 0.01 240);
+  --destructive: oklch(0.6 0.2 25);
+  --border: oklch(0.3 0.02 240);
+  --input: oklch(0.25 0.02 240);
+  --ring: oklch(0.65 0.2 260);
+  --chart-1: oklch(0.65 0.2 260);
+  --chart-2: oklch(0.65 0.15 160);
+  --chart-3: oklch(0.7 0.15 200);
+  --chart-4: oklch(0.65 0.2 320);
+  --chart-5: oklch(0.7 0.15 85);
+  --sidebar: oklch(0.2 0.02 240);
+  --sidebar-foreground: oklch(0.95 0.01 240);
+  --sidebar-primary: oklch(0.65 0.2 260);
+  --sidebar-primary-foreground: oklch(0.98 0.01 240);
+  --sidebar-accent: oklch(0.25 0.02 240);
+  --sidebar-accent-foreground: oklch(0.95 0.01 240);
+  --sidebar-border: oklch(0.25 0.02 240);
+  --sidebar-ring: oklch(0.65 0.2 260);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans scroll-smooth;
+  }
+}
+
+@layer utilities {
+  /* Mint & Indigo Pattern Background */
+  .alpona-bg {
+    background-color: oklch(0.98 0.01 240);
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(99, 102, 241, 0.06) 2px, transparent 2px),
+      radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.06) 2px, transparent 2px),
+      radial-gradient(circle at 50% 50%, rgba(20, 184, 166, 0.04) 1px, transparent 1px);
+    background-size: 60px 60px, 80px 80px, 30px 30px;
+    background-position: 0 0, 20px 20px, 10px 10px;
+  }
+
+  /* Modern Geometric Pattern */
+  .nakshi-pattern {
+    background-image:
+      repeating-linear-gradient(45deg, rgba(99, 102, 241, 0.04) 0px, rgba(99, 102, 241, 0.04) 2px, transparent 2px, transparent 8px),
+      repeating-linear-gradient(-45deg, rgba(16, 185, 129, 0.04) 0px, rgba(16, 185, 129, 0.04) 2px, transparent 2px, transparent 8px);
+    background-size: 20px 20px;
+  }
+
+  /* Subtle Grid Pattern */
+  .jamdani-pattern {
+    background-image:
+      linear-gradient(90deg, rgba(99, 102, 241, 0.06) 1px, transparent 1px),
+      linear-gradient(0deg, rgba(99, 102, 241, 0.06) 1px, transparent 1px);
+    background-size: 12px 12px;
+  }
+
+  /* Soft Aurora Gradient */
+  .aurora-soft {
+    background:
+      radial-gradient(at 10% 10%, rgba(99, 102, 241, 0.08) 0px, transparent 40%),
+      radial-gradient(at 90% 20%, rgba(16, 185, 129, 0.08) 0px, transparent 40%),
+      radial-gradient(at 50% 80%, rgba(20, 184, 166, 0.08) 0px, transparent 40%),
+      radial-gradient(at 80% 90%, rgba(99, 102, 241, 0.08) 0px, transparent 40%);
+    background-size: 100% 100%;
+    animation: aurora-gentle 30s ease-in-out infinite;
+  }
+
+  @keyframes aurora-gentle {
+    0%, 100% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+  }
+
+  /* Mint & Indigo Gradient */
+  .gradient-bengal {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #10b981 100%);
+  }
+
+  .gradient-gold {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);
+  }
+
+  .gradient-green {
+    background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+  }
+
+  .gradient-warm {
+    background: linear-gradient(135deg, #6366f1 0%, #10b981 50%, #14b8a6 100%);
+  }
+
+  /* Mint & Indigo Gradient Text */
+  .text-gradient-bengal {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 30%, #10b981 60%, #14b8a6 100%);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-gentle 8s ease infinite;
+  }
+
+  @keyframes gradient-gentle {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Glass morphism - subtle */
+  .glass-subtle {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow:
+      0 4px 24px rgba(0, 0, 0, 0.04),
+      inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+
+  .dark .glass-subtle {
+    background: rgba(30, 30, 30, 0.6);
+    backdrop-filter: blur(12px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+      0 4px 24px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  /* Decorative Corner Motifs - Traditional Bengali */
+  .motif-tl, .motif-tr, .motif-bl, .motif-br {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+  }
+
+  .motif-tl {
+    top: 1rem;
+    left: 1rem;
+    border-top: 2px solid rgba(185, 28, 28, 0.3);
+    border-left: 2px solid rgba(185, 28, 28, 0.3);
+  }
+
+  .motif-tr {
+    top: 1rem;
+    right: 1rem;
+    border-top: 2px solid rgba(217, 119, 6, 0.3);
+    border-right: 2px solid rgba(217, 119, 6, 0.3);
+  }
+
+  .motif-bl {
+    bottom: 1rem;
+    left: 1rem;
+    border-bottom: 2px solid rgba(21, 128, 61, 0.3);
+    border-left: 2px solid rgba(21, 128, 61, 0.3);
+  }
+
+  .motif-br {
+    bottom: 1rem;
+    right: 1rem;
+    border-bottom: 2px solid rgba(3, 105, 161, 0.3);
+    border-right: 2px solid rgba(3, 105, 161, 0.3);
+  }
+
+  /* Floating animation - gentle */
+  .float-gentle {
+    animation: float-gentle 5s ease-in-out infinite;
+  }
+
+  @keyframes float-gentle {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
+
+  /* Pulse - subtle */
+  .pulse-subtle {
+    animation: pulse-subtle 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-subtle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+
+  /* Shimmer effect - soft */
+  .shimmer-soft {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer-soft::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.15),
+      transparent
+    );
+    animation: shimmer-gentle 3s infinite;
+  }
+
+  @keyframes shimmer-gentle {
+    0% { left: -100%; }
+    100% { left: 100%; }
+  }
+
+  /* Gradient Border - Mint & Indigo */
+  .gradient-border-bengal {
+    position: relative;
+    background: var(--card);
+    border-radius: var(--radius-lg);
+  }
+
+  .gradient-border-bengal::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(135deg, #6366f1, #10b981, #14b8a6);
+    background-size: 200% 200%;
+    animation: gradient-gentle 6s ease infinite;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  /* Soft Glow Effects */
+  .glow-red-soft { box-shadow: 0 0 30px rgba(185, 28, 28, 0.2); }
+  .glow-gold-soft { box-shadow: 0 0 30px rgba(217, 119, 6, 0.2); }
+  .glow-green-soft { box-shadow: 0 0 30px rgba(21, 128, 61, 0.2); }
+
+  /* Scrollbar - Traditional Colors */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: linear-gradient(180deg, #fef3c7, #fde68a);
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #b91c1c, #d97706);
+    border-radius: 8px;
+    border: 2px solid #fef3c7;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #991b1b, #b45309);
+  }
+
+  /* Selection */
+  ::selection {
+    background: rgba(185, 28, 28, 0.2);
+    color: var(--foreground);
+  }
+
+  /* Decorative Divider - Traditional Pattern */
+  .divider-bengali {
+    position: relative;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #b91c1c, #d97706, #15803d, transparent);
+  }
+
+  .divider-bengali::before,
+  .divider-bengali::after {
+    content: '✦';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #d97706;
+    font-size: 12px;
+  }
+
+  .divider-bengali::before { left: 0; }
+  .divider-bengali::after { right: 0; }
+
+  /* Clay Pot Texture */
+  .clay-texture {
+    background-color: #a87b51;
+    background-image:
+      radial-gradient(circle at 50% 50%, rgba(0,0,0,0.1) 1px, transparent 1px),
+      radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 4px 4px, 8px 8px;
+    background-position: 0 0, 4px 4px;
+  }
+
+  /* Jute Texture */
+  .jute-texture {
+    background: linear-gradient(45deg, #d4a553 25%, #c49443 25%, #c49443 50%, #d4a553 50%, #d4a553 75%, #c49443 75%, #c49443 100%);
+    background-size: 4px 4px;
+    opacity: 0.3;
+  }
+
+  /* Rickshaw Art Gradient */
+  .rickshaw-gradient {
+    background: linear-gradient(135deg,
+      #b91c1c 0%,
+      #d97706 15%,
+      #fbbf24 30%,
+      #15803d 45%,
+      #0369a1 60%,
+      #be185d 75%,
+      #6b21a8 90%,
+      #b91c1c 100%);
+    background-size: 400% 400%;
+    animation: gradient-gentle 15s ease infinite;
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(185, 28, 28, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(217, 119, 6, 0.2);
+  }
+}
+
+@keyframes gradient-gentle {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shimmer-gentle {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Responsive utilities */
+@layer utilities {
+  .text-xs-bengali { font-size: 0.75rem; line-height: 1rem; }
+  .text-sm-bengali { font-size: 0.875rem; line-height: 1.25rem; }
+  .text-base-bengali { font-size: 1rem; line-height: 1.5rem; }
+  .text-lg-bengali { font-size: 1.125rem; line-height: 1.75rem; }
+  .text-xl-bengali { font-size: 1.25rem; line-height: 1.75rem; }
+  .text-2xl-bengali { font-size: 1.5rem; line-height: 2rem; }
+  .text-3xl-bengali { font-size: 1.875rem; line-height: 2.25rem; }
+  .text-4xl-bengali { font-size: 2.25rem; line-height: 2.5rem; }
+}
